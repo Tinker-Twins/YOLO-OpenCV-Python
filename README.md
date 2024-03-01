@@ -1,5 +1,7 @@
 # YOLO Object Detection with OpenCV in Python
 
+![YOLO-OpenCV-Python](result.png)
+
 ## Setup
 1. Download and Install Python 3: [**Windows:** [Python](https://www.python.org/downloads) OR [Anaconda](https://www.anaconda.com/download)] [**Ubuntu:** Already Installed]
 2. Install Required Dependencies:
