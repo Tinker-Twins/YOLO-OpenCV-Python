@@ -14,10 +14,13 @@
    git clone https://github.com/Tinker-Twins/YOLO-OpenCV-Python.git
    cd YOLO-OpenCV-Python
    ```
-4. Download [**yolov3.weights**](https://pjreddie.com/media/files/yolov3.weights) to the working directory:
+4. Download the **weights** to the working directory:
    ```bash
    cd YOLO-OpenCV-Python
+   wget -c https://pjreddie.com/media/files/yolov2.weights
+   wget -c https://pjreddie.com/media/files/yolov2-tiny.weights
    wget -c https://pjreddie.com/media/files/yolov3.weights
+   wget -c https://pjreddie.com/media/files/yolov3-tiny.weights
    ```
 
 ## Execution
@@ -25,7 +28,8 @@
    ```bash
    cd YOLO-OpenCV-Python
    ```
-2. Execute the `object_detection.py` Python script:
+   > **Note:** Select appropriate `weights` and `cfg` files in [`object_detection.py`](object_detection.py) before execution to use the respective YOLO model.
+2. Execute the [`object_detection.py`](object_detection.py) Python script:
    ```bash
    python3 object_detection.py
    ```
