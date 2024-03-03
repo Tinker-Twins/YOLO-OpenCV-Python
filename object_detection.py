@@ -2,11 +2,10 @@ import cv2 as cv
 import numpy as np
 
 # Load YOLO Model
-net = cv.dnn.readNet("/home/csamak/YOLO-OpenCV-Python/yolov3.weights",
-                     "/home/csamak/YOLO-OpenCV-Python/yolov3.cfg")
+net = cv.dnn.readNet("yolov3.weights", "yolov3.cfg")
 
 # Load Classes
-with open("/home/csamak/YOLO-OpenCV-Python/coco.names", 'r') as f:
+with open("coco.names", 'r') as f:
     classes = [line.strip() for line in f.readlines()]
 
 # Configuration
@@ -15,7 +14,7 @@ output_layer = [layer_name[i - 1] for i in net.getUnconnectedOutLayers()]
 colors = np.random.uniform(0, 255, size=(len(classes), 3))
 
 # Load Image
-img = cv.imread("/home/csamak/YOLO-OpenCV-Python/image.jpg")
+img = cv.imread("image.jpg")
 img = cv.resize(img, None, fx=0.2, fy=0.2)
 height, width, channel = img.shape
 
